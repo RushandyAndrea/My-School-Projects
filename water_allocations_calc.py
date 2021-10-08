@@ -20,7 +20,10 @@ LINE_LENGTH = 112
 
 
 def water_allocations_calc():
-    # Display a welcome message to user and define LINE_LENGTH at the top.
+    """
+    Display a welcome message to user and calculates the users input.
+    :return:
+    """
     print()
     print(f'*' * LINE_LENGTH)
     print()

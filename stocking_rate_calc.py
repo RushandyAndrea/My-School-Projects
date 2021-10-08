@@ -19,7 +19,10 @@ LINE_LENGTH = 112
 
 
 def stocking_rate_calc():
-    # Display a welcome message to user and define LINE_LENGTH at the top.
+    """
+    Display a welcome message to user.
+    :return:  exits a function and instructs Python to continue executing the main program.
+    """
 
     print()
     print(f'*' * LINE_LENGTH)
@@ -33,6 +36,7 @@ def stocking_rate_calc():
 
     # Input from the user, calls the if else statement input of the user between 1 and 20.
     while True:
+
         num_sample_taken = validation.get_range(prompt='Please enter the # of forage samples '
                                                        'taken: ', low=0, high=20)
 

@@ -3,17 +3,26 @@
 # This is the Farm Calculator Help header. Displaying a sort of encouraging message to the user.
 
 """
-programmer
-date
-description:
-
+Programmer: Rushandy Andrea
+Date: 6 October, 2021
+Description: In farm Calculator Help, the program will display the user different of common help question for
+             the user to choose from. User have to insert a number that is specific to their needs.
 """
 
+# Authorship
+__author__ = 'Rushandy Andrea'
+__version__ = '1.0'
+__date__ = 'October 6, 2021'
+__status__ = 'Development'
 
 LINE_LENGTH = 112
 
 
 def welcome():
+    """
+    This function displays the welcome message.
+    :return: exits a function and instructs Python to continue executing the main program.
+    """
 
     print(f'-' * LINE_LENGTH)
     print()
@@ -30,6 +39,10 @@ def welcome():
 
 
 def main():
+    """
+    This function displays the options to the user, and take and execute the options from the user.
+    :return:  exits a function and instructs Python to continue executing the main program.
+    """
     print('Here are few common questions option to choose from.')
     print()
     print('Command Menu')

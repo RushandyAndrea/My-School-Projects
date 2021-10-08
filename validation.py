@@ -1,12 +1,31 @@
 #!/usr/bin/env python3
 
 """
-
+Description: This is the validation program. It is used to check if the input data type is correct or not.
+             It can be used to check if there are no invalid values in the given input.
+             Validation in python can be used to check if the given input is valid.
 """
 
+# Authorship
+__author__ = 'Rushandy Andrea'
+__version__ = '1.0'
+__date__ = 'October 6, 2021'
+__status__ = 'Development'
 
-# description needed here
+
 def get_range(prompt, low, high, data_type='int'):
+    """
+    This function checks if the user inserted a number that is in the range of
+    the lowest asked and in the highest asked. By using a while loop to get the user to insert a
+    data or to close the program.
+    :param prompt: a string that will be printed on the screen whenever the function is called.
+    :param low: two variables; low and high. These variables are defined by their position.
+    :param high: two variables; low and high. These variables are defined by their position.
+    :param data_type: data types are the classification or categorization of data items. It represents
+                      the kind of value that tells what operations can be performed on a particular data.
+    :return: exits a function and instructs Python to continue executing the main program.
+    """
+
     while True:
         user_input = input(f'{prompt} (Range = {low}-{high}): ')
 
@@ -22,8 +41,16 @@ def get_range(prompt, low, high, data_type='int'):
                   'and less than or equal to', high)
 
 
-# docstrings needed
 def get_positive_num(prompt, data_type='int'):
+    """
+    This function checks if the user inserted a number greater than 0. By using a while loop to get the user to insert a
+    data or to close the program.
+    :param prompt: a string that will be printed on the screen whenever the function is called.
+    :param data_type: data types are the classification or categorization of data items. It represents
+                      the kind of value that tells what operations can be performed on a particular data.
+    :return: exits a function and instructs Python to continue executing the main program.
+    """
+
     while True:
         user_input_positive = input(f'{prompt} Insert a number greater than 0: ')
 
@@ -36,25 +63,30 @@ def get_positive_num(prompt, data_type='int'):
             return number_positive
         else:
             print('Please enter a number that is greater than zero!')
+            continue
 
 
-def get_num(prompt, data_type='int'):
+def get_num():
+    """
+    This function checks if the user has typed in a number and not anything else.
+    :return: exits a function and instructs Python to continue executing the main program.
     """
 
-    :param prompt:
-    :param data_type:
-    :return:
-    """
     while True:
-        user_input_num = input(f'{prompt} Insert a number: ')
 
-        if data_type == 'int':
-            num = int(user_input_num)
+        value = input('Write a number: ')
+        if value == int(value):
+            break
         else:
-            user_input_num = float(user_input_num)
+            print('That is not a number,enter a number, please')
+            continue
 
 
 def main():
+    """
+    Here is where the function ask for user input.
+    :return: exits a function and instructs Python to continue executing the main program.
+    """
     choice = 'y'
     while choice.lower() == 'y':
         # get input

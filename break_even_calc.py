@@ -10,9 +10,18 @@
 # increase in cost.
 """
 
+# Authorship
+__author__ = 'Rushandy Andrea, Ammishaddai Jacobus'
+__version__ = '1.0'
+__date__ = 'Sept 12, 2021'
+__status__ = 'Development'
+
 
 def break_even_calc():
-    # Display a welcome message to user
+    """
+    Display a welcome message to user.
+    :return: exits a function and instructs Python to continue executing the main program.
+    """
     print(" ")
     print(f'=' * 112)
     print("Break Even Calculator")
