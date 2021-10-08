@@ -17,6 +17,8 @@ __version__ = '1.0'
 __date__ = 'September 6, 2021'
 __status__ = 'Development'
 
+import validation as val
+
 
 def crop_calculator():
     """
@@ -36,9 +38,11 @@ def crop_calculator():
     # Here is where I get the input from the users.
     # I made it as user friendly as i could.
     # This get input section of the code will also store and use the stored input to calculate.
-    estimate_length = float(input("Enter the Estimate Length (ft.) of the coverage area here:\t"))
-    estimate_width = float(input("Enter the Estimate width (ft.) of the coverage area here:\t"))
-    seeding_rate = float(input("Enter the Seeding Rate (lbs) here:\t"))
+    estimate_length = val.get_positive_num(prompt='Enter the Estimate Length (ft.)'
+                                                  ' of the coverage area here: ', data_type='float')
+    estimate_width = val.get_positive_num(prompt='Enter the Estimate width (ft.)'
+                                                 ' of the coverage area here: ', data_type='float')
+    seeding_rate = val.get_positive_num(prompt='Enter the Seeding Rate (lbs) here: ', data_type='float')
 
     # Here is where I made the calculation code.
     # This calculation code will take information from the input of the users to calculate.

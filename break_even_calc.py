@@ -16,6 +16,8 @@ __version__ = '1.0'
 __date__ = 'Sept 12, 2021'
 __status__ = 'Development'
 
+import validation as val
+
 
 def break_even_calc():
     """
@@ -34,11 +36,12 @@ def break_even_calc():
     print(" ")
 
     # Input from the user
-    yield_per_acre = float(input("Please type in the yield per acre: "))
-    price_per_acre = float(input("Please type in the price per acre: "))
-    government_payment = float(input("Please type in the government payment per acre: "))
-    variable_cost = float(input("Please type in the variable cost per acre: "))
-    overhead_cost = float(input("Please type in the overhead cost per acre "))
+    yield_per_acre = val.get_positive_num(prompt='Please type in the yield per acre: ', data_type='float')
+    price_per_acre = val.get_positive_num(prompt='Please type in the price per acre: ', data_type='float')
+    government_payment = val.get_positive_num(prompt='Please type in the government'
+                                                     ' payment per acre: ', data_type='float')
+    variable_cost = val.get_positive_num(prompt='Please type in the variable cost per acre: ', data_type='float')
+    overhead_cost = val.get_positive_num(prompt='Please type in the overhead cost per acre: ', data_type='float')
 
     # Calculations row1
     total_revenue = (yield_per_acre * price_per_acre) + government_payment

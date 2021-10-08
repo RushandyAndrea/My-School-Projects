@@ -13,7 +13,7 @@ __version__ = '1.0'
 __date__ = 'Sept 19, 2021'
 __status__ = 'Development'
 
-import validation
+import validation as val
 
 LINE_LENGTH = 112
 
@@ -37,8 +37,8 @@ def stocking_rate_calc():
     # Input from the user, calls the if else statement input of the user between 1 and 20.
     while True:
 
-        num_sample_taken = validation.get_range(prompt='Please enter the # of forage samples '
-                                                       'taken: ', low=0, high=20)
+        num_sample_taken = val.get_range(prompt='Please enter the # of forage samples '
+                                                'taken: ', low=1, high=20)
 
         if 1 <= num_sample_taken <= 20:
             break
@@ -68,7 +68,7 @@ def stocking_rate_calc():
 
     # Input from the user, calls the if else statement input of the user between 1 and 100.
     while True:
-        utilization_rate = validation.get_range(prompt='Please enter the utilization rate:  ', low=0, high=100)
+        utilization_rate = val.get_range(prompt='Please enter the utilization rate:  ', low=1, high=100)
 
         if 1 <= utilization_rate <= 100:
             break
@@ -78,7 +78,7 @@ def stocking_rate_calc():
 
     # Input from the user, calls the if else statement input of the user between 1 and 2000.
     while True:
-        aum = validation.get_range(prompt='Please enter the animal unit:  ', low=0, high=2000)
+        aum = val.get_range(prompt='Please enter the animal unit:  ', low=1, high=2000)
 
         if 1 <= aum <= 2000:
             break
